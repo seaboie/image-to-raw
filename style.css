@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: #4f403b;
+}
+h1,
+h2,
+a {
+  color: #eef3fb;
+}
+input {
+  margin-top: 50px;
+  padding: 20px;
+}
+button {
+  padding: 10px 0;
+  margin: 20px 0 20px 0;
+  width: 100%;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+#convertBtn {
+  font-size: 2rem;
+  background-color: #043365;
+  color: wheat;
+  border-radius: 60px;
+}
+#convertBtn:hover {
+  font-size: 2rem;
+  background-color: #084e98;
+  color: wheat;
+}
+.copy-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #89bb0a;
+  font-size: xx-large;
+}

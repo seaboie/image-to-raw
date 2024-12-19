@@ -5,6 +5,7 @@ document.getElementById('convertBtn').addEventListener('click', function() {
     
     const rawUrlElement = document.getElementById('rawUrl');
     rawUrlElement.innerHTML = ''; // Clear previous content
+    rawUrlElement.style.color = '#eef3fb'; // Set text color for the raw URL
 
     if (rawUrl) {
         // Create a clickable link
@@ -12,6 +13,11 @@ document.getElementById('convertBtn').addEventListener('click', function() {
         link.href = rawUrl;
         link.target = '_blank'; // Open in a new tab
         link.textContent = rawUrl; // Display the URL as the link text
+
+        // Add click event listener to clear text content when clicked
+        link.addEventListener('click', function() {
+            rawUrlElement.innerHTML = ''; // Clear text content on click
+        });
         
         // Append the link to the rawUrl paragraph
         rawUrlElement.appendChild(link);
@@ -22,6 +28,7 @@ document.getElementById('convertBtn').addEventListener('click', function() {
         copyIcon.onclick = function() {
             navigator.clipboard.writeText(rawUrl).then(() => {
                 alert("Copied to clipboard!");
+                rawUrlElement.innerHTML = "";
             }).catch(err => {
                 console.error('Could not copy text: ', err);
             });
